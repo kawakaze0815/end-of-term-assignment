@@ -15,4 +15,4 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
-}
+    color: #fff; /* テキストの色を白に設定 */
