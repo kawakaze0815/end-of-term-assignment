@@ -1,0 +1,10 @@
+/* styles.css */
+header {
+    text-align: center;
+}
+
+img {
+    max-width: 100%; /* ヘッダー幅いっぱいに画像を広げる */
+    height: auto;
+    margin-bottom: 20px;
+}
