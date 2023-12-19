@@ -4,7 +4,7 @@ header {
 }
 
 img {
-    max-width: 50%; /* ヘッダー幅いっぱいに画像を広げる */
+    max-width: 50%; 
     height: auto;
     margin-bottom: 20px;
 }
