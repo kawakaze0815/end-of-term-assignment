@@ -1,32 +1,62 @@
 <!DOCTYPE html>
-<html lang="ja">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title> Web開発の練習１</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="myjs.js"></script> <!-- この行を追加 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        /* タイトルや本文のスタイルをここで指定 */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+    </style>
 </head>
-  <body>
+<body>
+
     <header>
-       <img src="./image/header-image.png" alt="soratosougen">
-        <h1>たなしょうのブログへようこそ</h1>
+        <h1>Welcome to My Blog</h1>
     </header>
-<main>
-<h2>簡単な自己紹介</h2>
-<p>名前：田中 将太</p>
-<p>年齢：２１歳</p>
-<p>出身校：城西大学（現３年生）</p>
-<p>趣味：紅茶、お酒、カードゲーム</p>
-<br>
-<h2>巡るめくカードゲーム飯</h2>
 
+    <nav>
+        <!-- ナビゲーションリンクを追加 -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  
-    <p>最終更新日　１２月１９日</p>
-</main>
-<footer>
-        <p>&copy; 2023 たなしょうのブログ。全著作権所有。</p>
+    <section id="home">
+        <h2>Home</h2>
+        <p>This is the home section of my blog.</p>
+        <!-- ここにコンテンツを追加 -->
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>Learn more about me and my blog.</p>
+        <!-- ここにコンテンツを追加 -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to contact me.</p>
+        <!-- ここにコンテンツを追加 -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 My Blog. All rights reserved.</p>
     </footer>
-  </body>
+
+</body>
 </html>
