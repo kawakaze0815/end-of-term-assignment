@@ -17,13 +17,19 @@ footer {
 .photo-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* 写真間の余白を設定 */
 }
 
 .photo {
-    width: 200px; /* すべての写真の幅を指定 */
-    height: 150px; /* すべての写真の高さを指定 */
-    object-fit: cover; /* 写真を容器にフィットさせる */
+    width: 200px;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.photo:hover {
+    transform: scale(1.1);
 }
 
 #scrollTopButton {
