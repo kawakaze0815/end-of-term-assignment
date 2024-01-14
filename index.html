@@ -19,44 +19,68 @@
         p {
             color: #666;
         }
+
+        header, footer {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <header>
+    <header id="header">
         <h1>私のブログへようこそ</h1>
     </header>
 
     <nav>
         <!-- ナビゲーションリンクを追加 -->
         <ul>
-            <li><a href="#home">ホーム</a></li>
-            <li><a href="#about">自己紹介</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="javascript:void(0);" onclick="changeContent('home')">ホーム</a></li>
+            <li><a href="javascript:void(0);" onclick="changeContent('about')">自己紹介</a></li>
+            <li><a href="javascript:void(0);" onclick="changeContent('contact')">お問い合わせ</a></li>
         </ul>
     </nav>
 
     <section id="home">
         <h2>ホーム</h2>
-        <p>これは私のブログのホームセクションです。</p>
+        <p id="homeContent">これは私のブログのホームセクションです。</p>
         <!-- ここにコンテンツを追加 -->
     </section>
 
     <section id="about">
         <h2>自己紹介</h2>
-        <p>私やこのブログについて詳しく知ることができます。</p>
+        <p id="aboutContent">私やこのブログについて詳しく知ることができます。</p>
         <!-- ここにコンテンツを追加 -->
     </section>
 
     <section id="contact">
         <h2>お問い合わせ</h2>
-        <p>お気軽にお問い合わせください。</p>
+        <p id="contactContent">お気軽にお問い合わせください。</p>
         <!-- ここにコンテンツを追加 -->
     </section>
 
-    <footer>
+    <footer id="footer">
         <p>&copy; 2023 私のブログ。全著作権所有。</p>
     </footer>
+
+    <script>
+        function changeContent(sectionId) {
+            // 各セクションのコンテンツを動的に変更
+            var homeContent = "これは私のブログのホームセクションです。";
+            var aboutContent = "私やこのブログについて詳しく知ることができます。";
+            var contactContent = "お気軽にお問い合わせください.";
+
+            // 対応するセクションのIDを使ってコンテンツを変更
+            if (sectionId === 'home') {
+                document.getElementById('homeContent').innerHTML = homeContent;
+            } else if (sectionId === 'about') {
+                document.getElementById('aboutContent').innerHTML = aboutContent;
+            } else if (sectionId === 'contact') {
+                document.getElementById('contactContent').innerHTML = contactContent;
+            }
+        }
+    </script>
 
 </body>
 </html>
