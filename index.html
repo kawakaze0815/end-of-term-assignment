@@ -6,6 +6,7 @@
     <title>私のブログ</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script> <!-- 新しく追加 -->
+<script src="ex06-14.js"></script>
 </head>
 <body>
 
@@ -40,6 +41,13 @@
         <!-- ここにコンテンツを追加 -->
     </section>
 
+<h1>練習問題6-14 3秒経ったら画像が戻る</h1>
+<img src='./image/inu1.jpg' id="inuhenkou" alt="wanwano">
+<form name="timer14">
+<input type="button" value="スタート" onclick="inuhenkou1();setTimeout('inuhenkou2()',3000)">
+                </form>
+
+    
     <footer id="footer">
         <p>&copy; 2023 私のブログ。全著作権所有。</p>
     </footer>
