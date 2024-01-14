@@ -24,6 +24,27 @@ function imgchange2() {
 }
 
 function redirectToURL(url) {
+
+
+function smoothScroll(targetId) {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+        window.scrollTo({
+            top: targetElement.offsetTop - 50, // 50は余白分の調整、必要に応じて調整してください
+            behavior: 'smooth'
+        });
+    }
+}
+
+// ナビゲーションリンクがクリックされたときの処理
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1); // # を除去
+        smoothScroll(targetId);
+    });
+});
+
     if (document.getElementById('logo').src.includes('ramen.png')) {
         window.location.href = url;
     }
