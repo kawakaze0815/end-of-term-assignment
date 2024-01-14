@@ -45,6 +45,26 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollTopButton = document.getElementById('scrollTopButton');
+
+    // スクロールが一定以上になったらボタンを表示
+    window.addEventListener('scroll', function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopButton.style.display = 'block';
+        } else {
+            scrollTopButton.style.display = 'none';
+        }
+    });
+
+    // ボタンがクリックされたらページのトップにスクロール
+    scrollTopButton.addEventListener('click', function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+});
+
+
     if (document.getElementById('logo').src.includes('ramen.png')) {
         window.location.href = url;
     }
