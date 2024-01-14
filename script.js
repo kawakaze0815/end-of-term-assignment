@@ -45,6 +45,23 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
+function showImage(src) {
+    var overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    
+    var enlargedImage = document.createElement('img');
+    enlargedImage.src = src;
+    enlargedImage.className = 'enlarged-image';
+
+    overlay.appendChild(enlargedImage);
+    
+    overlay.onclick = function () {
+        overlay.remove();
+    };
+    
+    document.body.appendChild(overlay);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const scrollTopButton = document.getElementById('scrollTopButton');
 
@@ -63,24 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.documentElement.scrollTop = 0;
     });
 });
-
-function showImage(src) {
-    var overlay = document.createElement('div');
-    overlay.className = 'overlay';
-    
-    var enlargedImage = document.createElement('img');
-    enlargedImage.src = src;
-    enlargedImage.className = 'enlarged-image';
-
-    overlay.appendChild(enlargedImage);
-    
-    overlay.onclick = function () {
-        overlay.remove();
-    };
-    
-    document.body.appendChild(overlay);
-}
-
 
     if (document.getElementById('logo').src.includes('ramen.png')) {
         window.location.href = url;
