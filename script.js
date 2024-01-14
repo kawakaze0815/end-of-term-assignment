@@ -81,6 +81,7 @@ function showImage(src) {
     document.body.appendChild(overlay);
 }
 
+
     if (document.getElementById('logo').src.includes('ramen.png')) {
         window.location.href = url;
     }
