@@ -4,28 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>私のブログ</title>
-    <style>
-        /* タイトルや本文のスタイルをここで指定 */
-        body {
-            font-family: '游ゴシック体', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-        }
-
-        header, footer {
-            background-color: #eee;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- 新しく追加 -->
 </head>
 <body>
 
@@ -64,23 +43,7 @@
         <p>&copy; 2023 私のブログ。全著作権所有。</p>
     </footer>
 
-    <script>
-        function changeContent(sectionId) {
-            // 各セクションのコンテンツを動的に変更
-            var homeContent = "これは私のブログのホームセクションです。";
-            var aboutContent = "私やこのブログについて詳しく知ることができます。";
-            var contactContent = "お気軽にお問い合わせください.";
-
-            // 対応するセクションのIDを使ってコンテンツを変更
-            if (sectionId === 'home') {
-                document.getElementById('homeContent').innerHTML = homeContent;
-            } else if (sectionId === 'about') {
-                document.getElementById('aboutContent').innerHTML = aboutContent;
-            } else if (sectionId === 'contact') {
-                document.getElementById('contactContent').innerHTML = contactContent;
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
